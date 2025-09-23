@@ -5,82 +5,117 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dn Associates - Support</title>
 <style>
+  :root {
+    --bg: #f9fbfd;
+    --card-bg: #fff;
+    --text: #333;
+    --nav-bg: #1b4332;
+    --nav-text: #d8f3dc;
+    --accent: #ff6f61;
+  }
+  body.dark {
+    --bg: #1a1a1a;
+    --card-bg: #2a2a2a;
+    --text: #eaeaea;
+    --nav-bg: #111;
+    --nav-text: #ccc;
+    --accent: #ff8a65;
+  }
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #f4f7f8;
-    margin: 0;
-    padding: 0;
-    color: #222;
+    font-family:'Segoe UI',sans-serif; margin:0; padding:0;
+    background:var(--bg);
+    color:var(--text);
+    transition: background 0.3s, color 0.3s;
   }
-  header, footer {
-    background: #00796b;
-    color: white;
-    text-align: center;
-    padding: 20px;
+  header {
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') no-repeat center/cover;
+    height:50vh; color:white; text-align:center;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
   }
-  nav {
-    background: #004d40;
-    display: flex;
-    justify-content: center;
-    padding: 10px 0;
+  header h1{ font-size:2.8rem; margin:0; }
+  header p{ font-size:1.2rem; margin:10px 0 25px; }
+  header a, .btn{ background:var(--accent); padding:12px 28px; border-radius:30px; color:white;
+    text-decoration:none; font-weight:bold; transition:all 0.3s; display:inline-block; }
+  header a:hover, .btn:hover{ filter:brightness(0.9); transform:scale(1.05); }
+
+  nav{ background:var(--nav-bg); position:sticky; top:0; z-index:10; display:flex; justify-content:center; align-items:center; }
+  nav .menu, nav a { list-style:none; margin:0; padding:0; }
+  nav .menu{ display:flex; justify-content:center; flex-wrap:wrap; }
+  nav a{ color:var(--nav-text); padding:14px 24px; text-decoration:none; font-weight:bold; display:block; transition:0.3s;}
+  nav a:hover{ background:#2d6a4f; color:white; }
+
+  .menu-toggle{ display:none; background:#2d6a4f; color:white; border:none; padding:14px;
+    font-size:1.2rem; cursor:pointer; width:100%; text-align:left; }
+
+  .theme-toggle{ margin-left:auto; background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--nav-text); padding:0 20px; }
+
+  main{ max-width:1100px; margin:40px auto; padding:30px; background:var(--card-bg); border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.08); transition: background 0.3s; }
+  h2{ color:var(--nav-bg); margin-bottom:20px; text-align:center; }
+
+  .flex-grid{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+  .card{
+    flex:1 1 250px; background:var(--card-bg); border-radius:14px; padding:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08); text-align:center; transition:transform 0.3s, box-shadow 0.3s, background 0.3s;
   }
-  nav a {
-    color: #a7ffeb;
-    text-decoration: none;
-    padding: 10px 20px;
-    font-weight: bold;
-  }
-  nav a:hover {
-    background: #00796b;
-    color: white;
-  }
-  main {
-    max-width: 600px;
-    margin: 30px auto;
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-  }
-  h1 {
-    color: #004d40;
-  }
-  p {
-    font-size: 1.2rem;
-    margin: 20px 0;
-  }
-  a.email-link {
-    color: #00796b;
-    font-weight: bold;
-    text-decoration: none;
+  .card:hover{ transform:translateY(-8px); box-shadow:0 10px 24px rgba(0,0,0,0.15); }
+
+  input,textarea{ width:100%; padding:12px; border:1px solid #ccc; border-radius:6px; font-size:1rem; margin-bottom:15px; background:var(--bg); color:var(--text); }
+  button{ background:var(--accent); color:white; border:none; padding:12px 20px; border-radius:30px; font-size:1rem; font-weight:bold; cursor:pointer; transition:0.3s; }
+  button:hover{ filter:brightness(0.9); transform:scale(1.05); }
+
+  iframe{ width:100%; height:300px; border:0; border-radius:12px; margin-top:20px; }
+
+  footer{ background:var(--nav-bg); color:var(--nav-text); padding:25px; text-align:center; margin-top:50px; transition: background 0.3s; }
+
+  @media (max-width:768px){
+    nav .menu{ display:none; flex-direction:column; }
+    nav .menu.show{ display:flex; }
+    .menu-toggle{ display:block; }
+    .flex-grid{ flex-direction:column; }
   }
 </style>
 </head>
 <body>
-
-<header>
-  <h1>Dn Associates - Support</h1>
-</header>
+<header><h1>Support</h1></header>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="support.html">Support</a>
-  <a href="contact.html">Contact</a>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 </nav>
 
 <main>
-  <p>For support, please email us:</p>
-  <p><a href="mailto:support@dnassociates.com" class="email-link">support@dnassociates.com</a></p>
-  <p>Or call us at:</p>
-  <ul style="list-style:none; padding:0;">
-    <li>9790520010</li>
-  </ul>
+  
+  <h2>We’re Here to Help</h2>
+  <div class="flex-grid">
+    <div class="card"><h3>Email</h3><p><a href="mailto:support@dnassociates.com">support@dnassociates.com</a></p></div>
+    <div class="card"><h3>Phone</h3><p>+91 9790520010</p></div>
+    <div class="card"><h3>Location</h3><p>Mugalivakkam, Chennai, 600210</p></div>
+  </div>
+
+  <h2>FAQ</h2>
+  <div class="card"><p><strong>Response Time:</strong> Within 24 hours.</p></div>
+  <div class="card"><p><strong>Availability:</strong> Mon–Fri, 9AM–6PM IST</p></div>
+
 </main>
 
 <footer>
-  &copy; 2025 Dn Associates. All rights reserved.
+  <p>&copy; 2025 Dn Associates. All rights reserved.</p>
 </footer>
 
+<script>
+  function toggleMenu(){ document.querySelector('nav .menu').classList.toggle('show'); }
+  function toggleTheme(){
+    document.body.classList.toggle('dark');
+    document.querySelector('.theme-toggle').textContent =
+      document.body.classList.contains('dark') ? '🌞' : '🌙';
+  }
+</script>
 </body>
 </html>

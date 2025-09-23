@@ -5,175 +5,121 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dn Associates - Home</title>
 <style>
+  :root {
+    --bg: #f9fbfd;
+    --card-bg: #fff;
+    --text: #333;
+    --nav-bg: #1b4332;
+    --nav-text: #d8f3dc;
+    --accent: #ff6f61;
+  }
+  body.dark {
+    --bg: #1a1a1a;
+    --card-bg: #2a2a2a;
+    --text: #eaeaea;
+    --nav-bg: #111;
+    --nav-text: #ccc;
+    --accent: #ff8a65;
+  }
   body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-    background-image: url('https://www.transparenttextures.com/patterns/diagmonds-light.png');
-    background-repeat: repeat;
-    color: #e0f7fa;
+    font-family:'Segoe UI',sans-serif; margin:0; padding:0;
+    background:var(--bg);
+    color:var(--text);
+    transition: background 0.3s, color 0.3s;
   }
   header {
-    background-color: rgba(0, 77, 64, 0.85);
-    padding: 20px 0;
-    text-align: center;
-    color: white;
+    background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)),
+      url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d') no-repeat center/cover;
+    height:50vh; color:white; text-align:center;
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
   }
-  header img {
-    max-width: 140px;
+  header h1{ font-size:2.8rem; margin:0; }
+  header p{ font-size:1.2rem; margin:10px 0 25px; }
+  header a, .btn{ background:var(--accent); padding:12px 28px; border-radius:30px; color:white;
+    text-decoration:none; font-weight:bold; transition:all 0.3s; display:inline-block; }
+  header a:hover, .btn:hover{ filter:brightness(0.9); transform:scale(1.05); }
+
+  nav{ background:var(--nav-bg); position:sticky; top:0; z-index:10; display:flex; justify-content:center; align-items:center; }
+  nav .menu, nav a { list-style:none; margin:0; padding:0; }
+  nav .menu{ display:flex; justify-content:center; flex-wrap:wrap; }
+  nav a{ color:var(--nav-text); padding:14px 24px; text-decoration:none; font-weight:bold; display:block; transition:0.3s;}
+  nav a:hover{ background:#2d6a4f; color:white; }
+
+  .menu-toggle{ display:none; background:#2d6a4f; color:white; border:none; padding:14px;
+    font-size:1.2rem; cursor:pointer; width:100%; text-align:left; }
+
+  .theme-toggle{ margin-left:auto; background:none; border:none; font-size:1.4rem; cursor:pointer; color:var(--nav-text); padding:0 20px; }
+
+  main{ max-width:1100px; margin:40px auto; padding:30px; background:var(--card-bg); border-radius:14px; box-shadow:0 6px 18px rgba(0,0,0,0.08); transition: background 0.3s; }
+  h2{ color:var(--nav-bg); margin-bottom:20px; text-align:center; }
+
+  .flex-grid{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+  .card{
+    flex:1 1 250px; background:var(--card-bg); border-radius:14px; padding:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08); text-align:center; transition:transform 0.3s, box-shadow 0.3s, background 0.3s;
   }
-  nav {
-    background: rgba(0, 105, 92, 0.85);
-    display: flex;
-    justify-content: center;
-    padding: 12px 0;
-  }
-  nav a {
-    color: #a7ffeb;
-    text-decoration: none;
-    padding: 12px 28px;
-    font-weight: 600;
-    border-radius: 4px;
-    transition: background 0.3s ease;
-  }
-  nav a:hover {
-    background: #004d40;
-    color: #ffffff;
-  }
-  main {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
-  }
-  h1, h2 {
-    color: #b2dfdb;
-    margin-top: 0;
-  }
-  p {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    max-width: 750px;
-    margin-bottom: 20px;
-  }
-  section {
-    background: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-    border-radius: 15px;
-    padding: 25px 30px;
-    margin: 30px 0;
-  }
-  .features {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-  }
-  .feature-box {
-    flex: 1 1 280px;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.3);
-    color: #004d40;
-  }
-  .feature-box img {
-    width: 80px;
-    margin-bottom: 12px;
-    filter: drop-shadow(0 0 3px #004d40);
-  }
-  ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    color: #b2dfdb;
-  }
-  footer {
-    background: rgba(0, 77, 64, 0.85);
-    color: #a7ffeb;
-    padding: 18px;
-    text-align: center;
-    font-size: 0.9rem;
-  }
-  /* Responsive */
-  @media (max-width: 768px) {
-    nav {
-      flex-direction: column;
-    }
-    nav a {
-      padding: 10px 0;
-      display: block;
-      width: 100%;
-      text-align: center;
-      border-radius: 0;
-    }
-    .features {
-      flex-direction: column;
-      align-items: center;
-    }
+  .card:hover{ transform:translateY(-8px); box-shadow:0 10px 24px rgba(0,0,0,0.15); }
+
+  input,textarea{ width:100%; padding:12px; border:1px solid #ccc; border-radius:6px; font-size:1rem; margin-bottom:15px; background:var(--bg); color:var(--text); }
+  button{ background:var(--accent); color:white; border:none; padding:12px 20px; border-radius:30px; font-size:1rem; font-weight:bold; cursor:pointer; transition:0.3s; }
+  button:hover{ filter:brightness(0.9); transform:scale(1.05); }
+
+  iframe{ width:100%; height:300px; border:0; border-radius:12px; margin-top:20px; }
+
+  footer{ background:var(--nav-bg); color:var(--nav-text); padding:25px; text-align:center; margin-top:50px; transition: background 0.3s; }
+
+  @media (max-width:768px){
+    nav .menu{ display:none; flex-direction:column; }
+    nav .menu.show{ display:flex; }
+    .menu-toggle{ display:block; }
+    .flex-grid{ flex-direction:column; }
   }
 </style>
 </head>
 <body>
-
-<header>
-  <img src="DnAssociateswebsitelogo.jpeg" alt="Dn Associates Logo" />
-  <h1>Dn Associates</h1>
-  <p>Innovative Software Solutions for Your Business</p>
-</header>
+<header><h1>Dn Associates</h1></header>
 
 <nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About Us</a>
-  <a href="support.html">Support</a>
-  <a href="contact.html">Contact</a>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 </nav>
 
 <main>
-  <section>
-    <h2>Welcome to Dn Associates</h2>
-    <p>We deliver trustworthy, scalable software solutions tailored to your business growth and digital transformation needs.</p>
-    <p>Explore our service offerings, meet our leadership team, and discover how we can assist you in thriving in the competitive market.</p>
-  </section>
+  
+  <h2>Our Services</h2>
+  <div class="flex-grid">
+    <div class="card"><img src="https://img.icons8.com/color/96/code.png"><h3>Custom Development</h3><p>Tailored software to achieve your goals.</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/96/cloud.png"><h3>Cloud & DevOps</h3><p>Reliable and scalable infrastructure solutions.</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/96/combo-chart--v1.png"><h3>Data & Analytics</h3><p>Business intelligence powered by data insights.</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/96/artificial-intelligence.png"><h3>AI & ML</h3><p>Smart solutions powered by machine learning.</p></div>
+  </div>
 
-  <section class="features">
-    <div class="feature-box">
-      <img src="https://img.icons8.com/clouds/100/000000/code.png" alt="Development Icon" />
-      <h3>Custom Development</h3>
-      <p>Solutions tailored precisely to your business needs.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://img.icons8.com/clouds/100/000000/cloud-configuration.png" alt="Cloud Icon" />
-      <h3>Cloud & DevOps</h3>
-      <p>Modern scalable infrastructure for reliability and speed.</p>
-    </div>
-    <div class="feature-box">
-      <img src="https://img.icons8.com/clouds/100/000000/analytics.png" alt="Analytics Icon" />
-      <h3>Data & Analytics</h3>
-      <p>Insights to drive smarter business decisions.</p>
-    </div>
-  </section>
+  <h2>Careers</h2>
+  <div class="flex-grid">
+    <div class="card"><h3>Software Developer</h3><p>Build modern applications and systems.</p></div>
+    <div class="card"><h3>Data Scientist</h3><p>Uncover insights from complex data.</p></div>
+    <div class="card"><h3>Cloud Engineer</h3><p>Design and manage secure cloud solutions.</p></div>
+  </div>
 
-  <section>
-    <h2>Career Opportunities</h2>
-    <ul>
-      <li>Software Developer</li>
-      <li>Web Developer</li>
-      <li>Data Scientist</li>
-      <li>IT Consultant</li>
-      <li>AI/ML Developer</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Training & Development</h2>
-    <p>Empower your team with hands-on training, mentorship, and real projects. Build skills that matter to grow your career.</p>
-  </section>
 </main>
 
 <footer>
-  &copy; 2025 Dn Associates. All rights reserved.
+  <p>&copy; 2025 Dn Associates. All rights reserved.</p>
 </footer>
 
+<script>
+  function toggleMenu(){ document.querySelector('nav .menu').classList.toggle('show'); }
+  function toggleTheme(){
+    document.body.classList.toggle('dark');
+    document.querySelector('.theme-toggle').textContent =
+      document.body.classList.contains('dark') ? '🌞' : '🌙';
+  }
+</script>
 </body>
 </html>
