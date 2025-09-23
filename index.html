@@ -9,55 +9,74 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: #f4f7f8;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
     color: #333;
   }
   header {
-    background-color: #00796b;
+    background-color: #004d40;
     padding: 20px 0;
     color: white;
     text-align: center;
   }
   header img {
-    max-width: 120px;
+    max-width: 140px;
   }
   nav {
-    background: #004d40;
+    background: #00695c;
     display: flex;
     justify-content: center;
-    padding: 10px 0;
+    padding: 12px 0;
   }
   nav a {
     color: #a7ffeb;
     text-decoration: none;
-    padding: 10px 20px;
-    font-weight: bold;
+    padding: 12px 28px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background 0.3s ease;
   }
   nav a:hover {
-    background: #00796b;
+    background: #004d40;
     color: white;
   }
   main {
-    max-width: 1000px;
-    margin: 30px auto;
+    max-width: 1100px;
+    margin: 40px auto;
     padding: 0 20px;
   }
-  h1 {
+  h1, h2 {
     color: #004d40;
-    margin-bottom: 10px;
   }
   p {
     font-size: 1.1rem;
     line-height: 1.6;
-    max-width: 700px;
+    max-width: 750px;
     margin-bottom: 20px;
   }
   section {
     background: white;
-    margin: 20px 0;
+    margin: 30px 0;
+    padding: 24px 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  .feature-box {
+    flex: 1 1 280px;
+    background: #e0f2f1;
+    border-radius: 8px;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 7px rgb(0 0 0 / 0.1);
+    text-align: center;
+    box-shadow: inset 0 0 15px #b2dfdb;
+  }
+  .feature-box img {
+    width: 80px;
+    margin-bottom: 12px;
   }
   ul {
     list-style-type: disc;
@@ -66,16 +85,33 @@
   footer {
     background: #004d40;
     color: #a7ffeb;
-    padding: 15px;
+    padding: 18px;
     text-align: center;
     font-size: 0.9rem;
+  }
+  /* Responsive */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+    }
+    nav a {
+      padding: 10px 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+      border-radius: 0;
+    }
+    .features {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 </style>
 </head>
 <body>
 
 <header>
-  <img src="DnAssociateswebsitelogo.jpeg" alt="Dn Associates Logo" />
+  <img src="DnAssociateswebsitelogo.jpeg" alt="Dn Associates Logo">
   <h1>Dn Associates</h1>
   <p>Innovative Software Solutions for Your Business</p>
 </header>
@@ -90,75 +126,42 @@
 <main>
   <section>
     <h2>Welcome to Dn Associates</h2>
-    <p>We are dedicated to delivering modern, reliable, and scalable software solutions to help businesses succeed in a digital world. Our team leverages the latest technologies to craft solutions tailored to your unique needs.</p>
-    <p>Explore our services, meet our team, and contact us for a consultation. We are here to partner with you for growth and innovation.</p>
+    <p>We deliver trustworthy, scalable software solutions tailored to your business growth and digital transformation needs.</p>
+    <p>Explore our service offerings, meet our leadership team, and discover how we can assist you in thriving in the competitive market.</p>
   </section>
 
-  <section>
-    <h2>Our Expertise</h2>
-    <ul>
-      <li>Custom Software Development</li>
-      <li>Cloud and DevOps Services</li>
-      <li>Enterprise Integration</li>
-      <li>Mobile and Web App Development</li>
-      <li>Data Analytics and Business Intelligence</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Training & Development Services</h2>
-    <p>Unlock your team's potential with our comprehensive training and development services. We provide the tools and knowledge your team needs to excel. Contact us today to elevate your workforce!</p>
-    <p>Email: <a href="mailto:hello@brodsage.com">hello@brodsage.com</a></p>
-    <p>Website: <a href="http://www.broadsage.com" target="_blank">www.broadsage.com</a></p>
-  </section>
-
-  <section>
-    <h2>Program Highlights</h2>
-    <ul>
-      <li>Hands-on Training</li>
-      <li>Industry Experts</li>
-      <li>Real-world Projects</li>
-      <li>Career Development</li>
-      <li>Mentorship and Internship</li>
-      <li>Certification</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Program Outcomes</h2>
-    <ul>
-      <li>Developed Skills</li>
-      <li>Improved Problem Solving</li>
-      <li>Enhanced Career Prospects</li>
-      <li>Network and Community</li>
-      <li>Portfolio Development</li>
-      <li>Industry Recognition</li>
-    </ul>
+  <section class="features">
+    <div class="feature-box">
+      <img src="https://img.icons8.com/clouds/100/000000/code.png" alt="Development Icon" />
+      <h3>Custom Development</h3>
+      <p>Solutions tailored precisely to your business needs.</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://img.icons8.com/clouds/100/000000/cloud-configuration.png" alt="Cloud Icon" />
+      <h3>Cloud & DevOps</h3>
+      <p>Modern scalable infrastructure for reliability and speed.</p>
+    </div>
+    <div class="feature-box">
+      <img src="https://img.icons8.com/clouds/100/000000/analytics.png" alt="Analytics Icon" />
+      <h3>Data & Analytics</h3>
+      <p>Insights to drive smarter business decisions.</p>
+    </div>
   </section>
 
   <section>
     <h2>Career Opportunities</h2>
-    <p>Upon completing our program, you will be well suited for a variety of career opportunities:</p>
     <ul>
       <li>Software Developer</li>
       <li>Web Developer</li>
       <li>Data Scientist</li>
       <li>IT Consultant</li>
-      <li>Architect</li>
       <li>AI/ML Developer</li>
     </ul>
   </section>
 
   <section>
-    <h2>Program Methodology</h2>
-    <ul>
-      <li>Lectures</li>
-      <li>FOSS</li>
-      <li>Group Projects</li>
-      <li>Hackathons</li>
-      <li>Mentorship</li>
-      <li>Startup Incubator</li>
-    </ul>
+    <h2>Training & Development</h2>
+    <p>Empower your team with hands-on training, mentorship, and real projects. Build skills that matter to grow your career.</p>
   </section>
 </main>
 
