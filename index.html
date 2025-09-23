@@ -2,124 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>DnAssociates</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dn Associates - Home</title>
 <style>
   body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background: #fff;
-    color: #222;
+    background: #f4f7f8;
+    color: #333;
   }
   header {
-    background: linear-gradient(90deg, #1e90ff, #00c48c);
+    background-color: #00796b;
+    padding: 20px 0;
     color: white;
-    padding: 30px 20px 20px 20px;
     text-align: center;
-    border-bottom: 1px solid #e7e7e7;
   }
-  .logo {
-    display: block;
-    margin: 0 auto 20px auto;
-    max-width: 180px;
+  header img {
+    max-width: 120px;
   }
-  h1 {
-    margin-bottom: 10px;
-    font-size: 2rem;
-    letter-spacing: 2px;
+  nav {
+    background: #004d40;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+  }
+  nav a {
+    color: #a7ffeb;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-weight: bold;
+  }
+  nav a:hover {
+    background: #00796b;
+    color: white;
   }
   main {
-    max-width: 1100px;
-    margin: 40px auto;
+    max-width: 1000px;
+    margin: 30px auto;
     padding: 0 20px;
   }
+  h1 {
+    color: #004d40;
+    margin-bottom: 10px;
+  }
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 700px;
+    margin-bottom: 20px;
+  }
   section {
-    margin-bottom: 55px;
-  }
-  h2 {
-    color: #005a48;
-  }
-  h3 {
-    color: #1e90ff;
+    background: white;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 7px rgb(0 0 0 / 0.1);
   }
   ul {
-    padding-left: 18px;
-  }
-  .contact-table {
-    border-collapse: collapse;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 500px;
-  }
-  .contact-table th {
-    background: #ececec;
-    text-align: left;
-    padding: 9px;
-  }
-  .contact-table td {
-    padding: 9px;
-    border-bottom: 1px solid #e7e7e7;
-  }
-  .btn {
-    background: #00c48c;
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 18px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-top: 10px;
-  }
-  .btn:hover {
-    background: #007755;
+    list-style-type: disc;
+    padding-left: 20px;
   }
   footer {
+    background: #004d40;
+    color: #a7ffeb;
+    padding: 15px;
     text-align: center;
-    padding: 22px 12px;
-    background: #f6f6f6;
-    color: #666;
-    margin-top: 40px;
+    font-size: 0.9rem;
   }
 </style>
 </head>
 <body>
+
 <header>
-  <img src="DnAssociates_website_logo.jpeg" alt="DnAssociates Logo" class="logo" />
-  <h1>DnAssociates</h1>
-  <div>Software Company</div>
+  <img src="DnAssociateswebsitelogo.jpeg" alt="Dn Associates Logo" />
+  <h1>Dn Associates</h1>
+  <p>Innovative Software Solutions for Your Business</p>
 </header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="support.html">Support</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
 <main>
-  <section id="about">
-    <h2>About Us</h2>
-    <p>DnAssociates delivers reliable and modern software solutions to help clients grow and transform their businesses in today’s digital world.</p>
+  <section>
+    <h2>Welcome to Dn Associates</h2>
+    <p>We are dedicated to delivering modern, reliable, and scalable software solutions to help businesses succeed in a digital world. Our team leverages the latest technologies to craft solutions tailored to your unique needs.</p>
+    <p>Explore our services, meet our team, and contact us for a consultation. We are here to partner with you for growth and innovation.</p>
   </section>
-  <section id="services">
-    <h2>Our Services</h2>
+
+  <section>
+    <h2>Our Expertise</h2>
     <ul>
       <li>Custom Software Development</li>
-      <li>Application Modernization</li>
-      <li>Cloud Solutions</li>
+      <li>Cloud and DevOps Services</li>
       <li>Enterprise Integration</li>
-      <li>Ongoing Support and Maintenance</li>
+      <li>Mobile and Web App Development</li>
+      <li>Data Analytics and Business Intelligence</li>
     </ul>
   </section>
-  <section id="contacts">
-    <h2>Contact Us</h2>
-    <h3>Our Team Emails</h3>
-    <table class="contact-table">
-      <tr><th>Department</th><th>Email</th></tr>
-      <tr><td>Support</td><td><a href="mailto:Support@DnAssociates.com">Support@DnAssociates.com</a></td></tr>
-      <tr><td>HR</td><td><a href="mailto:HR@DnAssociates.com">HR@DnAssociates.com</a></td></tr>
-      <tr><td>Finance</td><td><a href="mailto:Finance@DnAssocites.com">Finance@DnAssocites.com</a></td></tr>
-      <tr><td>Information</td><td><a href="mailto:Info@DnAssociates.com">Info@DnAssociates.com</a></td></tr>
-    </table>
-    <button class="btn" onclick="window.location.href='mailto:Info@DnAssociates.com'">Contact Us by Email</button>
+
+  <section>
+    <h2>Training & Development Services</h2>
+    <p>Unlock your team's potential with our comprehensive training and development services. We provide the tools and knowledge your team needs to excel. Contact us today to elevate your workforce!</p>
+    <p>Email: <a href="mailto:hello@brodsage.com">hello@brodsage.com</a></p>
+    <p>Website: <a href="http://www.broadsage.com" target="_blank">www.broadsage.com</a></p>
+  </section>
+
+  <section>
+    <h2>Program Highlights</h2>
+    <ul>
+      <li>Hands-on Training</li>
+      <li>Industry Experts</li>
+      <li>Real-world Projects</li>
+      <li>Career Development</li>
+      <li>Mentorship and Internship</li>
+      <li>Certification</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Program Outcomes</h2>
+    <ul>
+      <li>Developed Skills</li>
+      <li>Improved Problem Solving</li>
+      <li>Enhanced Career Prospects</li>
+      <li>Network and Community</li>
+      <li>Portfolio Development</li>
+      <li>Industry Recognition</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Career Opportunities</h2>
+    <p>Upon completing our program, you will be well suited for a variety of career opportunities:</p>
+    <ul>
+      <li>Software Developer</li>
+      <li>Web Developer</li>
+      <li>Data Scientist</li>
+      <li>IT Consultant</li>
+      <li>Architect</li>
+      <li>AI/ML Developer</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Program Methodology</h2>
+    <ul>
+      <li>Lectures</li>
+      <li>FOSS</li>
+      <li>Group Projects</li>
+      <li>Hackathons</li>
+      <li>Mentorship</li>
+      <li>Startup Incubator</li>
+    </ul>
   </section>
 </main>
+
 <footer>
-  &copy; 2025 DnAssociates. All rights reserved.
+  &copy; 2025 Dn Associates. All rights reserved.
 </footer>
+
 </body>
 </html>
