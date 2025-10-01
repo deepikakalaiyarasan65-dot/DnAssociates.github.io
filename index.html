@@ -23,30 +23,78 @@ header a{ background:#00bfa5; padding:12px 28px; border-radius:25px; color:white
 header a:hover{ background:#00897b;}
 nav a:hover{ background:#00796b; color:white;}
 
+/* Default (desktop) */
+nav {
+  background: var(--nav-bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 6px 0;
+}
+
+nav .menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: var(--nav-text);
+  padding: 10px 14px;
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+}
+
 .menu-toggle {
-  display: none; /* hidden by default */
+  display: none; /* hidden on desktop */
   background: #00796b;
   color: white;
   border: none;
   padding: 12px 16px;
   font-size: 1.2rem;
   cursor: pointer;
-  width: 100%;
   text-align: left;
+  margin: 10px 0;
 }
 
+/* Mobile view */
 @media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
   .menu-toggle {
     display: block; /* show only on mobile */
   }
+
   nav .menu {
     display: none;
     flex-direction: column;
     width: 100%;
     background: var(--nav-bg);
+    margin-top: 10px;
+    padding: 0;
   }
+
   nav .menu.show {
     display: flex;
+  }
+
+  nav a {
+    width: 100%;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 }
 
