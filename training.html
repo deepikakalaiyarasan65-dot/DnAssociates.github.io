@@ -19,18 +19,48 @@ header img{ width: clamp(120px, 20vw, 220px); height:auto; margin-bottom:12px; }
 .flex-grid{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
 .card{ flex:1 1 250px; background:var(--card-bg); border-radius:14px; padding:20px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
 .btn{ background:var(--accent); color:white; padding:10px 18px; border-radius:30px; text-decoration:none; }
+
+.menu-toggle {
+  display: none; /* hidden by default */
+  background: #00796b;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show only on mobile */
+  }
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--nav-bg);
+  }
+  nav .menu.show {
+    display: flex;
+  }
+}
+
 </style>
 </head>
 <body>
 <header class="site-header"><div><img alt="DNA Software and Technologies Logo" src="logo_dna_trendy.png"/><h1>Training Programs</h1><p>Empowering Professionals with Cutting-Edge Skills</p></div></header>
 <nav>
-<ul class="menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="training.html">Training</a></li>
-<li><a href="support.html">Support</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul><button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 </nav>
 <main style="text-align:center;">
 <h2>Our Training Services</h2>
@@ -68,8 +98,16 @@ header img{ width: clamp(120px, 20vw, 220px); height:auto; margin-bottom:12px; }
 </div>
 </main>
 <footer style="background:var(--nav-bg);color:var(--nav-text);text-align:center;padding:20px;margin-top:30px;">© 2025 DNA Software and Technologies. All rights reserved.</footer>
+
 <script>
-function toggleTheme(){document.body.classList.toggle('dark');document.querySelector('.theme-toggle').textContent=document.body.classList.contains('dark')?'🌞':'🌙';}
+  function toggleMenu() {
+    document.querySelector('nav .menu').classList.toggle('show');
+  }
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+    document.querySelector('.theme-toggle').textContent =
+      document.body.classList.contains('dark') ? '🌞' : '🌙';
+  }
 </script>
 </body>
 </html>

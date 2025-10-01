@@ -22,6 +22,34 @@ header img{ width: clamp(120px, 20vw, 220px); height:auto; margin-bottom:12px; }
 header a{ background:#00bfa5; padding:12px 28px; border-radius:25px; color:white; text-decoration:none; font-weight:bold; transition:background 0.3s;}
 header a:hover{ background:#00897b;}
 nav a:hover{ background:#00796b; color:white;}
+
+.menu-toggle {
+  display: none; /* hidden by default */
+  background: #00796b;
+  color: white;
+  border: none;
+  padding: 12px 16px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block; /* show only on mobile */
+  }
+  nav .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: var(--nav-bg);
+  }
+  nav .menu.show {
+    display: flex;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -36,13 +64,15 @@ nav a:hover{ background:#00796b; color:white;}
 </header>
 
 <nav>
-<ul class="menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About Us</a></li>
-<li><a href="training.html">Training</a></li>
-<li><a href="support.html">Support</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul><button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  <ul class="menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="training.html">Training</a></li>
+    <li><a href="support.html">Support</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 </nav>
 <main style="text-align:center;">
 <h2>Our Services</h2>
@@ -69,14 +99,7 @@ nav a:hover{ background:#00796b; color:white;}
 
 
 
-<script>
-  function toggleMenu(){ document.querySelector('nav .menu').classList.toggle('show'); }
-  function toggleTheme(){
-    document.body.classList.toggle('dark');
-    document.querySelector('.theme-toggle').textContent =
-      document.body.classList.contains('dark') ? '🌞' : '🌙';
-  }
-</script>
+
 <script>
 window.addEventListener('load', function() {
   document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80')";
@@ -84,6 +107,16 @@ window.addEventListener('load', function() {
   document.body.style.backgroundAttachment = "fixed";
   document.body.style.backgroundPosition = "center";
 });
+</script>
+<script>
+  function toggleMenu() {
+    document.querySelector('nav .menu').classList.toggle('show');
+  }
+  function toggleTheme() {
+    document.body.classList.toggle('dark');
+    document.querySelector('.theme-toggle').textContent =
+      document.body.classList.contains('dark') ? '🌞' : '🌙';
+  }
 </script>
 </body>
 </html>
