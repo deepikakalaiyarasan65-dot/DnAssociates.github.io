@@ -1,11 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <link href="logo_dna_trendy.png" rel="icon" type="image/png"/>
-<title>NDSTRIA TECH - Training</title>
-
+<title>NDSTRIA TECH - Reviews</title>
 <style>
 :root { --bg: #f9fbfd; --card-bg: #ffffff; --text: #1a1a1a; --nav-bg: #0a3d62; --nav-text: #ecf0f1; --accent: #00a86b; }
 body { background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed; background-size: cover; font-family: "Segoe UI", system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--text); }
@@ -16,6 +16,12 @@ nav{ background:var(--nav-bg); position:sticky; top:0; z-index:10; display:flex;
 nav .menu{ display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:14px; list-style:none; margin:0; padding:0; }
 nav a{ color:var(--nav-text); padding:10px 14px; text-decoration:none; font-weight:bold; display:block; }
 header img{width: clamp(100px, 12vw, 160px); height:auto; margin-bottom:12px;}
+.flex-grid{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
+.card{ flex:1 1 250px; background:var(--card-bg); border-radius:14px; padding:20px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
+.btn{ background:var(--accent); color:white; padding:10px 18px; border-radius:30px; text-decoration:none; }
+header a{ background:#00bfa5; padding:12px 28px; border-radius:25px; color:white; text-decoration:none; font-weight:bold; transition:background 0.3s;}
+header a:hover{ background:#00897b;}
+footer{ background:var(--nav-bg);color:var(--nav-text);text-align:center;padding:20px;margin-top:30px;}
 .flex-grid{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
 .card{ flex:1 1 250px; background:var(--card-bg); border-radius:14px; padding:20px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
 .btn{ background:var(--accent); color:white; padding:10px 18px; border-radius:30px; text-decoration:none; }
@@ -94,11 +100,10 @@ nav a {
     border-bottom: 1px solid rgba(255,255,255,0.1);
   }
 }
-
 </style>
 </head>
 <body>
-<header class="site-header"><div><img alt="NDSTRIA TECH Logo" src="logo_dna_trendy.png"/><h1>Training Programs</h1><p>Empowering Professionals with Cutting-Edge Skills</p></div></header>
+<header class="site-header"><div><img alt="NDSTRIA TECH Logo" src="logo_dna_trendy.png"/><h1>Client Reviews</h1><p>Hear what our clients say about NDSTRIA TECH</p></div></header>
 <nav>
   
   <ul class="menu">
@@ -110,54 +115,37 @@ nav a {
     <li><a href="reviews.html">Reviews</a></li>
     <li><a href="gallery.html">Gallery</a></li>
   </ul>
-  <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 </nav>
 <main style="text-align:center;">
-<h2>Our Training Services</h2>
+<h2>Share Your Experience</h2>
+<form action="https://formspree.io/f/your_form_id" method="POST" style="max-width:600px;margin:0 auto;text-align:left;">
+  <label>Name</label>
+  <input type="text" name="name" required style="width:100%;padding:10px;margin-bottom:10px;">
+  <label>Email</label>
+  <input type="email" name="_replyto" required style="width:100%;padding:10px;margin-bottom:10px;">
+  <label>Company (optional)</label>
+  <input type="text" name="company" style="width:100%;padding:10px;margin-bottom:10px;">
+  <label>Rating</label>
+  <select name="rating" required style="width:100%;padding:10px;margin-bottom:10px;">
+    <option>⭐⭐⭐⭐⭐ Excellent</option>
+    <option>⭐⭐⭐⭐ Good</option>
+    <option>⭐⭐⭐ Average</option>
+    <option>⭐⭐ Poor</option>
+    <option>⭐ Very Poor</option>
+  </select>
+  <label>Message</label>
+  <textarea name="message" rows="4" required style="width:100%;padding:10px;margin-bottom:10px;"></textarea>
+  <button type="submit" class="btn">Submit Review</button>
+</form>
+
+<h2 style="margin-top:40px;">Recent Reviews</h2>
 <div class="flex-grid">
-<div class="card"><h3>Leadership Training</h3><p>Develop effective leadership skills.</p></div>
-<div class="card"><h3>Team Building</h3><p>Strengthen collaboration within your teams.</p></div>
-<div class="card"><h3>Skill Development</h3><p>Enhance professional capabilities with targeted training.</p></div>
-<div class="card"><h3>One-Day Workshop</h3><p>Intensive, focused training sessions.</p></div>
-<div class="card"><h3>Seminary Programs</h3><p>Structured academic-style learning.</p></div>
-<div class="card"><h3>Mentorship & Certification</h3><p>Guided mentorship and recognized certification.</p></div>
-</div>
-<h2>Program Highlights</h2>
-<div class="flex-grid">
-<div class="card"><h3>Hands-On Training</h3></div>
-<div class="card"><h3>Industry Experts</h3></div>
-<div class="card"><h3>Real-World Projects</h3></div>
-<div class="card"><h3>Mentorship &amp; Certification</h3></div>
-</div>
-<h2>Program Outcomes</h2>
-<div class="flex-grid">
-<div class="card"><h3>Developed Skills</h3></div>
-<div class="card"><h3>Improved Problem Solving</h3></div>
-<div class="card"><h3>Enhanced Career Prospects</h3></div>
-<div class="card"><h3>Networking &amp; Community</h3></div>
-<div class="card"><h3>Portfolio Development</h3></div>
-<div class="card"><h3>Industry Recognition</h3></div>
-</div>
-<h2>Program Methodology</h2>
-<div class="flex-grid">
-<div class="card"><h3>Lectures</h3></div>
-<div class="card"><h3>Group Projects</h3></div>
-<div class="card"><h3>Hackathons</h3></div>
-<div class="card"><h3>Mentorship</h3></div>
-<div class="card"><h3>Startup Incubator</h3></div>
+  <div class="card"><p>⭐⭐⭐⭐⭐</p><p>“NDSTRIA TECH has consistently delivered high-quality solutions, transforming the way we operate.”</p><p><strong>— Priya R., HR Manager, SoftEdge Systems</strong></p></div>
+  <div class="card"><p>⭐⭐⭐⭐⭐</p><p>“Professional, timely, and innovative — their software team exceeded expectations.”</p><p><strong>— Rahul M., CTO, NexaVision Pvt Ltd</strong></p></div>
+  <div class="card"><p>⭐⭐⭐⭐⭐</p><p>“The collaboration was seamless, and the final outcome was exceptional.”</p><p><strong>— Anitha S., Project Manager, CloudEdge Solutions</strong></p></div>
 </div>
 </main>
-<footer style="background:var(--nav-bg);color:var(--nav-text);text-align:center;padding:20px;margin-top:30px;">© 2025 NDSTRIA TECH. All rights reserved.</footer>
-
-<script>
-  /* function toggleMenu() removed */ function removedToggleMenu() {
-    document.querySelector('nav .menu').classList.toggle('show');
-  }
-  function toggleTheme() {
-    document.body.classList.toggle('dark');
-    document.querySelector('.theme-toggle').textContent =
-      document.body.classList.contains('dark') ? '🌞' : '🌙';
-  }
-</script>
+<footer>© 2025 NDSTRIA TECH. All rights reserved.</footer>
+<script>/* function toggleMenu() removed */ function removedToggleMenu(){document.querySelector('nav .menu').classList.toggle('show');}</script>
 </body>
 </html>

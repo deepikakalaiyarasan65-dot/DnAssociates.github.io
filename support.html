@@ -7,14 +7,14 @@
 <link rel="icon" type="image/png" href="logo_dna_trendy.png"/>
 <style>
 :root { --bg: #f9fbfd; --card-bg: #ffffff; --text: #1a1a1a; --nav-bg: #0a3d62; --nav-text: #ecf0f1; --accent: #00a86b; }
-body { background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed; background-size: cover; font-family: "Segoe UI", system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--text); }
+body { background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed; background-size: cover; font-family: "Segoe UI", system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--text); }
 header.site-header { background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; min-height: 28vh; display: flex; align-items: center; justify-content:center; color:#fff; text-align:center; padding: 36px 18px; }
 header.site-header h1 { margin:0; font-size:2.2rem; letter-spacing:1px; }
 main { max-width:1100px; margin:40px auto; padding:30px; background:rgba(255,255,255,0.85); border-radius:14px; }
 nav{ background:var(--nav-bg); position:sticky; top:0; z-index:10; display:flex; justify-content:center; align-items:center; padding:6px 0; }
 nav .menu{ display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:14px; list-style:none; margin:0; padding:0; }
 nav a{ color:var(--nav-text); padding:10px 14px; text-decoration:none; font-weight:bold; display:block; }
-header img{ width: clamp(120px, 20vw, 220px); height:auto; margin-bottom:12px; }
+header img{width: clamp(100px, 12vw, 160px); height:auto; margin-bottom:12px;}
 .flex-grid{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
 .card{ flex:1 1 250px; background:var(--card-bg); border-radius:14px; padding:20px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
 .btn{ background:var(--accent); color:white; padding:10px 18px; border-radius:30px; text-decoration:none; }
@@ -31,7 +31,7 @@ h2{ color:#004d40; margin-top:20px;}
     .contact-cards{ flex-direction:column;}
     nav .menu{ display:none; flex-direction:column;}
     nav .menu.show{ display:flex;}
-    .menu-toggle{ display:block;}}
+    /* menu-toggle removed */{ display:block;}}
 
 /* Default (desktop) */
 nav {
@@ -64,7 +64,7 @@ nav a {
   display: block;
 }
 
-.menu-toggle {
+/* menu-toggle removed */ {
   display: none; /* hidden on desktop */
   background: #00796b;
   color: white;
@@ -84,7 +84,7 @@ nav a {
     padding: 10px;
   }
 
-  .menu-toggle {
+  /* menu-toggle removed */ {
     display: block; /* show only on mobile */
   }
 
@@ -113,13 +113,15 @@ nav a {
 <body>
 <header class="site-header"><div><img alt="NDSTRIA TECH Logo" src="logo_dna_trendy.png"/><h1>Support Services</h1><p>Reliable Assistance Whenever You Need</p></div></header>
 <nav>
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+  
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Us</a></li>
     <li><a href="training.html">Training</a></li>
     <li><a href="support.html">Support</a></li>
     <li><a href="contact.html">Contact</a></li>
+    <li><a href="reviews.html">Reviews</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
   </ul>
   <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 </nav>
@@ -160,7 +162,7 @@ nav a {
 <footer style="background:var(--nav-bg);color:var(--nav-text);text-align:center;padding:20px;margin-top:30px;">© 2025 NDSTRIA TECH. All rights reserved.</footer>
 
 <script>
-  function toggleMenu() {
+  /* function toggleMenu() removed */ function removedToggleMenu() {
     document.querySelector('nav .menu').classList.toggle('show');
   }
   function toggleTheme() {
