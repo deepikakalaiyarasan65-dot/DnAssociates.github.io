@@ -1,118 +1,158 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<link href="logo_dna_trendy.png" rel="icon" type="image/png"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<link rel="icon" type="image/png" href="logo_dna_trendy.png"/>
 <title>NDSTRIA TECH - Home</title>
 <style>
-:root { --bg: #f9fbfd; --card-bg: #ffffff; --text: #1a1a1a; --nav-bg: #0a3d62; --nav-text: #ecf0f1; --accent: #00a86b; }
-body { background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed; background-size: cover; font-family: "Segoe UI", system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial; margin:0; color:var(--text); }
-header.site-header { background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat; min-height: 28vh; display: flex; align-items: center; justify-content:center; color:#fff; text-align:center; padding: 36px 18px; }
+:root { 
+  --bg: #f9fbfd; 
+  --card-bg: #ffffff; 
+  --text: #1a1a1a; 
+  --nav-bg: #0a3d62; 
+  --nav-text: #ecf0f1; 
+  --accent: #00a86b; 
+}
+
+body { 
+  background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80')
+    no-repeat center center fixed; 
+  background-size: cover; 
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, 'Helvetica Neue', Arial; 
+  margin:0; 
+  color:var(--text); 
+}
+
+header.site-header { 
+  background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.55)),
+    url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1920&q=80') 
+    center/cover no-repeat; 
+  min-height: 28vh; 
+  display: flex; 
+  align-items: center; 
+  justify-content:center; 
+  color:#fff; 
+  text-align:center; 
+  padding: 36px 18px; 
+}
+
 header.site-header h1 { margin:0; font-size:2.2rem; letter-spacing:1px; }
-main { max-width:1100px; margin:40px auto; padding:30px; background:rgba(255,255,255,0.85); border-radius:14px; }
-nav{ background:var(--nav-bg); position:sticky; top:0; z-index:10; display:flex; justify-content:center; align-items:center; padding:6px 0; }
-nav .menu{ display:flex; justify-content:center; align-items:center; flex-wrap:wrap; gap:14px; list-style:none; margin:0; padding:0; }
-nav a{ color:var(--nav-text); padding:10px 14px; text-decoration:none; font-weight:bold; display:block; }
-header img{width: clamp(100px, 12vw, 160px); height:auto; margin-bottom:12px;}
-.flex-grid{ display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-.card{ flex:1 1 250px; background:var(--card-bg); border-radius:14px; padding:20px; text-align:center; box-shadow:0 6px 18px rgba(0,0,0,0.08); }
-.btn{ background:var(--accent); color:white; padding:10px 18px; border-radius:30px; text-decoration:none; }
-header a{ background:#00bfa5; padding:12px 28px; border-radius:25px; color:white; text-decoration:none; font-weight:bold; transition:background 0.3s;}
-header a:hover{ background:#00897b;}
-nav a:hover{ background:#00796b; color:white;}
 
-/* Default (desktop) */
-nav {
-  background: var(--nav-bg);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 6px 0;
+main { 
+  max-width:1100px; 
+  margin:40px auto; 
+  padding:30px; 
+  background:rgba(255,255,255,0.85); 
+  border-radius:14px; 
 }
 
-nav .menu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 14px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+nav { 
+  background:var(--nav-bg); 
+  position:sticky; 
+  top:0; 
+  z-index:10; 
+  display:flex; 
+  justify-content:center; 
+  align-items:center; 
+  padding:6px 0; 
+  flex-wrap:wrap;
 }
 
-nav a {
-  color: var(--nav-text);
-  padding: 10px 14px;
-  text-decoration: none;
-  font-weight: bold;
-  display: block;
+nav .menu { 
+  display:flex; 
+  justify-content:center; 
+  align-items:center; 
+  flex-wrap:wrap; 
+  gap:14px; 
+  list-style:none; 
+  margin:0; 
+  padding:0; 
 }
 
-/* menu-toggle removed */ {
-  display: none; /* hidden on desktop */
+nav a { 
+  color:var(--nav-text); 
+  padding:10px 14px; 
+  text-decoration:none; 
+  font-weight:bold; 
+  display:block; 
+}
+
+nav a:hover{ background:#00796b; color:white; }
+
+header img {
+  width: clamp(100px, 12vw, 160px); 
+  height:auto; 
+  margin-bottom:12px;
+}
+
+.flex-grid { 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:20px; 
+  justify-content:center; 
+}
+
+.card { 
+  flex:1 1 250px; 
+  background:var(--card-bg); 
+  border-radius:14px; 
+  padding:20px; 
+  text-align:center; 
+  box-shadow:0 6px 18px rgba(0,0,0,0.08); 
+}
+
+header a { 
+  background:#00bfa5; 
+  padding:12px 28px; 
+  border-radius:25px; 
+  color:white; 
+  text-decoration:none; 
+  font-weight:bold; 
+  transition:background 0.3s;
+}
+
+header a:hover { background:#00897b; }
+
+.theme-toggle {
   background: #00796b;
   color: white;
   border: none;
-  padding: 12px 16px;
-  font-size: 1.2rem;
+  padding: 10px 14px;
+  border-radius: 6px;
   cursor: pointer;
-  text-align: left;
-  margin: 10px 0;
+  font-size: 1rem;
+  margin-left: 10px;
 }
 
-/* Mobile view */
 @media (max-width: 768px) {
   nav {
     flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    align-items: center;
   }
-
-  /* menu-toggle removed */ {
-    display: block; /* show only on mobile */
-  }
-
   nav .menu {
-    display: none;
     flex-direction: column;
-    width: 100%;
-    background: var(--nav-bg);
-    margin-top: 10px;
-    padding: 0;
   }
-
-  nav .menu.show {
-    display: flex;
-  }
-
   nav a {
     width: 100%;
-    padding: 12px 16px;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    text-align: center;
   }
 }
-
 </style>
 </head>
-<body>
 
+<body>
 <header class="site-header">
   <div>
-    <img alt="NDSTRIA TECH Logo" src="logo_dna_trendy.png"/>
+    <img src="logo_dna_trendy.png" alt="NDSTRIA TECH Logo"/>
     <h1>Home</h1>
     <p>Innovative Software Solutions for Your Business</p>
-	<a href="about.html">Learn More</a>
+    <a href="about.html">Learn More</a>
   </div>
 </header>
 
 <nav>
-  
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="about.html">About Us</a></li>
@@ -124,53 +164,39 @@ nav a {
   </ul>
   <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
 </nav>
+
 <main style="text-align:center;">
-<h2>Our Services</h2>
-<div class="flex-grid">
-<div class="card"><img src="https://img.icons8.com/color/96/code.png"/><h3>Custom Development</h3><p>Tailored software to achieve your goals.</p></div>
-<div class="card"><img src="https://img.icons8.com/color/96/cloud.png"/><h3>Cloud &amp; DevOps</h3><p>Reliable and scalable infrastructure solutions.</p></div>
-<div class="card"><img src="https://img.icons8.com/color/96/combo-chart--v1.png"/><h3>Data &amp; Analytics</h3><p>Business intelligence powered by data insights.</p></div>
-<div class="card"><img src="https://img.icons8.com/color/96/artificial-intelligence.png"/><h3>AI &amp; ML</h3><p>Smart solutions powered by machine learning.</p></div>
-<div class="card"><img src="https://img.icons8.com/color/96/lock--v1.png"/><h3>Cyber Security</h3><p>Protect your business with robust security solutions.</p></div><div class="card"><img src="https://img.icons8.com/fluency/96/android.png" alt="Mobile App Development"/><h3>Mobile App Development</h3><p>Build innovative mobile applications for Android &amp; iOS.</p></div>
-<div class="card"><img src="https://img.icons8.com/color/96/graduation-cap.png"/><h3>Placement Services</h3><p>Connecting skilled professionals with top companies for career opportunities.</p></div>
-<div class="card"><img src="https://img.icons8.com/color/96/training.png"/><h3>Training Programs</h3><p>Comprehensive training to enhance skills and prepare for real-world challenges.</p></div>
-</div>
+  <h2>Our Services</h2>
+  <div class="flex-grid">
+    <div class="card"><img src="https://img.icons8.com/color/96/code.png"/><h3>Custom Development</h3><p>Tailored software to achieve your goals.</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/96/cloud.png"/><h3>Cloud &amp; DevOps</h3><p>Reliable and scalable infrastructure solutions.</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/96/combo-chart--v1.png"/><h3>Data &amp; Analytics</h3><p>Business intelligence powered by data insights.</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/96/artificial-intelligence.png"/><h3>AI &amp; ML</h3><p>Smart solutions powered by machine learning.</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/96/lock--v1.png"/><h3>Cyber Security</h3><p>Protect your business with robust security solutions.</p></div>
+    <div class="card"><img src="https://img.icons8.com/fluency/96/android.png" alt="Mobile App Development"/><h3>Mobile App Development</h3><p>Build innovative mobile applications for Android &amp; iOS.</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/96/graduation-cap.png"/><h3>Placement Services</h3><p>Connecting skilled professionals with top companies for career opportunities.</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/96/training.png"/><h3>Training Programs</h3><p>Comprehensive training to enhance skills and prepare for real-world challenges.</p></div>
+  </div>
 
-<h2 style="margin-top:40px;">Careers</h2>
-
-
+  <h2 style="margin-top:40px;">Careers</h2>
   <div class="flex-grid">
     <div class="card"><h3>Software Developer</h3><p>Build modern applications and systems.</p></div>
     <div class="card"><h3>Data Scientist</h3><p>Uncover insights from complex data.</p></div>
     <div class="card"><h3>Cloud Engineer</h3><p>Design and manage secure cloud solutions.</p></div>
   </div>
-  <div class="flex-grid">
-  
-  
-  </div>
 </main>
-<footer style="background:var(--nav-bg);color:var(--nav-text);text-align:center;padding:20px;margin-top:30px;">© 2025 NDSTRIA TECH. All rights reserved.</footer>
 
-
-
+<footer style="background:var(--nav-bg);color:var(--nav-text);text-align:center;padding:20px;margin-top:30px;">
+  © 2025 NDSTRIA TECH. All rights reserved.
+</footer>
 
 <script>
-window.addEventListener('load', function() {
-  document.body.style.backgroundImage = "url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80')";
-  document.body.style.backgroundSize = "cover";
-  document.body.style.backgroundAttachment = "fixed";
-  document.body.style.backgroundPosition = "center";
-});
+function toggleTheme() {
+  document.body.classList.toggle('dark');
+  document.querySelector('.theme-toggle').textContent =
+    document.body.classList.contains('dark') ? '🌞' : '🌙';
+}
 </script>
-<script>
-  /* function toggleMenu() removed */ function removedToggleMenu() {
-    document.querySelector('nav .menu').classList.toggle('show');
-  }
-  function toggleTheme() {
-    document.body.classList.toggle('dark');
-    document.querySelector('.theme-toggle').textContent =
-      document.body.classList.contains('dark') ? '🌞' : '🌙';
-  }
-</script>
+
 </body>
 </html>
